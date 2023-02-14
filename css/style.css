@@ -8,6 +8,21 @@ html {
     scroll-behavior: smooth;
 }
 
+hr {
+    width: 40% !important;
+    margin-left: auto !important;
+    margin-right: auto  !important;
+
+}
+
+
+.hr-grey {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 
 .home-5-bg {
     background: white;
@@ -418,6 +433,7 @@ a:focus {
   transition: opacity 0.3s ease-in 0.4s;
 }
 
+
 @media (max-width: 480px) {
   .container {
     width: 100vw;
@@ -445,3 +461,20 @@ a:focus {
 #footer {
     font-family: 'Montserrat', sans-serif;
 }
+
+
+
+/* Hidding things on desktop vs. mobile */
+
+@media (max-width: 767px) {
+.hidden-mobile {
+    display: none;
+    }
+}
+
+@media (min-width: 767px) {
+    .hidden-desktop {
+        display: none;
+        }
+    }
+    

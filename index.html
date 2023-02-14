@@ -263,6 +263,7 @@ particlesJS("particles-js", {
         <div class="aboutme features-box col-lg-4">
           <!--<i class="fa-solid fa-calculator fa-4x features-icon"></i> -->
           <h3 class="features-title">About me.</h3>
+          <hr >
           <p class="features-text" style="text-align: justify;">My name is Sean, I am en epidemiologist working for the UBC and BC Centres for Disease Control in Vancouver, British Columbia. 
             My recent work focuses on COVID-19 variant severity.
             <br> 
@@ -295,8 +296,10 @@ particlesJS("particles-js", {
         </div>
 
       <!-- <h4 class="features-title">Experience & education.</h4> --> 
-      <h2></h2>
+      
       <div class="about-me row justify-content-md-center">
+        <h4 style="text-align:center">Experience</h4> 
+        <hr  width="50%"/>
         <div class="aboutme features-box col-lg-7 ">
           <div class="accordion justify-content-md-center" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
@@ -396,8 +399,12 @@ particlesJS("particles-js", {
 
 
       <!---- <h2 class="timeline-title">Education </h2> ---->
-      <div class="timeline row hide-if-small-screen" style="padding-top: 5%; padding-bottom: 0%">
-        <div class="col-lg-12 text-center">
+            <!-- Timeline for mobile devices -->
+      <div class="timeline row hide-if-small-screen hidden-mobile" style="padding-top: 5%; padding-bottom: 0%">
+        <h4 class="hidden-mobile" style="text-align:center" >Education</h4> 
+        <hr class="hidden-mobile">
+        <p><br class="hidden-mobiles"></p>
+        <div class="col-lg-12 text-center hidden-mobile ">
           <svg width="1000" height="100">
             <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
 
@@ -434,6 +441,54 @@ particlesJS("particles-js", {
         </div>
       </div>
 
+      <!-- Timeline for desktop devices -->
+      <div class="timeline row hide-if-small-screen hidden-desktop" style="padding-top: 5%; padding-bottom: 0%">
+        <h4 class="hidden-desktop" style="text-align:center" >Education</h4> 
+        <hr class="hidden-desktop">
+        <p><br class="hidden-desktop"></p>
+        <div class="col-lg-12 text-center hidden-desktop">
+          
+          <svg width="300" height="500">
+
+            <line x1="150" y1="0" x2="150" y2="60" style="stroke:black; stroke-width:2.5" />
+            <circle cx="150" cy="75" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
+            <text text-anchor="middle" x="115" y="80" fill="black">2019</text>
+            <text font-size="13" text-anchor="left" x="175" y="25" fill="black">BSc in Biology</text>
+            <text font-size="13" text-anchor="left" x="175" y="45" fill="black">Minor in Statistics</text>
+            <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="35" fill="#808080">UVic</text>
+        
+            <line x1="150" y1="90" x2="150" y2="140" style="stroke:black; stroke-width:2.5" />
+            <circle cx="150" cy="155" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
+            <text text-anchor="middle" x="115" y="160" fill="black">2021</text>
+            <text font-size="13" text-anchor="left" x="175" y="120" fill="black">MSc in Epidemiology</text>
+            <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="120" fill="#808080">UBC</text>
+        
+            <line x1="150" y1="170" x2="150" y2="220" style="stroke:black; stroke-width:2.5" />
+            <circle cx="150" cy="235" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
+            <text text-anchor="middle" x="115" y="240" fill="black">2022</text>
+            <text font-size="13" text-anchor="left" x="175" y="190" fill="black">Certificate in Data Science,</text>
+            <text font-size="13" text-anchor="left" x="175" y="210" fill="black">Programming in Python</text>
+            <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="200" fill="#808080">UBC</text>
+        
+            <line x1="150" y1="250" x2="150" y2="300" style="stroke:black; stroke-width:2.5" />
+            <circle cx="150" cy="315" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
+            <text text-anchor="middle" x="115" y="320" fill="black">2023</text>
+            <text font-size="13" text-anchor="left" x="175" y="270" fill="black">Decision Modeling in Health</text>
+            <text font-size="13" text-anchor="left" x="175" y="290" fill="black">Economic Evaluation</text>
+            <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="270" fill="#808080">York</text>
+            <text style="font-style: italic" font-size="13" text-anchor="right" x="82" y="290" fill="#808080">University</text>
+        
+        
+            <line x1="150" y1="330" x2="150" y2="380" style="stroke:black; stroke-width:2.5" />
+            <text font-size="13" text-anchor="left" x="175" y="350" fill="black">Certificate in Machine</text>
+            <text font-size="13" text-anchor="left" x="175" y="370" fill="black">Learning and AI</text>
+            <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="360" fill="#808080">UBC</text>
+        
+        
+          </svg>
+        </div>
+      </div>
+
 
 
     </section>
@@ -445,7 +500,8 @@ particlesJS("particles-js", {
 
 
     <section id="cards">
-      <div><h3 style="padding-top: 2%; padding-bottom: 2%; text-align: center; color: grey">Publications</h3></div>
+      <div><h3 style="padding-top: 2%;  text-align: center; color: grey">Publications</h3></div>
+      <hr>
 
       <div class="box flex">
           <div class="container-cards">
@@ -478,7 +534,9 @@ particlesJS("particles-js", {
         
       <section id="awards" style="padding-top:10px; padding-bottom:30px">
 
-        <div><h3 style="padding-top: 2%; padding-bottom: 2%; text-align: center;">Awards & News</h3></div>
+        <div><h3 style="padding-top: 2%; text-align: center;">Awards & News</h3></div>
+        <hr>
+        <p><br></p>
 
         <div class="container">
           <div class="row">
@@ -495,7 +553,7 @@ particlesJS("particles-js", {
 
                 The CGS M program supports up to 3,000 students annually in all disciplines and is administered jointly by Canada’s three granting agencies: the Canadian Institutes of Health Research (CIHR),</p>
              <a href="https://www.bcgenerationsproject.ca/across-generations-bc-generations-project-newsletter-winter-2020-21/" class="btn btn-info btn-sm" style="color:white">Read More</a>
-             <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0396872" class="btn btn-dark btn-sm" style="color:white">Read More</a>
+             <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0396872" class="btn btn-dark btn-sm" style="color:white">Thesis</a>
              <!--<a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a> --> 
             </div>
            </div>
@@ -513,7 +571,7 @@ particlesJS("particles-js", {
                 of the Faculty of Medicine, and in the case of graduate students, in consultation with the Faculty of Graduate and 
                 Postdoctoral Studies.</p>
              <a href="https://grad-postdoc.med.ubc.ca/laurel-l-watters-research-fellowship/" class="btn btn-info btn-sm" style="color:white">Read More</a>
-             <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0396872" class="btn btn-dark btn-sm" style="color:white">Read More</a>
+             <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0396872" class="btn btn-dark btn-sm" style="color:white">Thesis</a>
             </div>
             </div>
           </div>
@@ -548,7 +606,8 @@ particlesJS("particles-js", {
 
         <section id="testimonials">
 
-          <div><h3 style="padding-top: 2%;">Volunteer projects</h3></div>
+          <div><h3 style="padding-top: 2%;"><strong>Volunteer projects</strong> </h3></div>
+          <hr>
 
           <div id="testimonial-carousel"  style="padding-top: 0px" class="carousel slide" data-ride="false">
             <div class="carousel-inner" style="padding-top: 0px">
