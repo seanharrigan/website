@@ -1,6 +1,7 @@
 body{
     margin-top:0px;
     backgroundColor:#eee;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -55,7 +56,7 @@ text-align: center;
 #about {
     padding-top:  60px;
     padding-bottom: 60px;
-    
+    font-family: 'Montserrat', sans-serif;
 }
 
 .about-me {
@@ -99,15 +100,18 @@ text-align: center;
     margin: -10px -15px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .accordion-body {
     color: grey;
     size: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .accordian-item-header {
     background-color: rgb(193, 34, 34);
+    font-family: 'Montserrat', sans-serif;
 }
   
 .accordian-button {
@@ -237,7 +241,8 @@ background-color: #B4957C !important;
 #testimonials {
     text-align: center;
     background-color: #93BFCF;
-    color: #fff
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .testimonial-image {
@@ -269,7 +274,7 @@ background-color: #B4957C !important;
     padding: 7% 8% ;
     margin: 0;
     background-color: white;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -431,4 +436,12 @@ a:focus {
 .awards-text {
     color: grey;
     size: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* Footer */
+#footer {
+    font-family: 'Montserrat', sans-serif;
 }
