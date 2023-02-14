@@ -427,5 +427,8 @@ a:focus {
 
 
 
-
-
+/*  Awards */
+.awards-text {
+    color: grey;
+    size: 0.5rem;
+}
