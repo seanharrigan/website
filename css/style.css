@@ -475,6 +475,9 @@ a:focus {
 @media (min-width: 767px) {
     .hidden-desktop {
         display: none;
-        }
     }
-    
+}
+
+.dropdown-backdrop {
+    position: static;
+}
