@@ -495,10 +495,7 @@ a:focus {
 
 
 
-
-
-
-
+/* Code writing animation   */
 
 .wrapper {
     height: 40vh;
@@ -508,7 +505,7 @@ a:focus {
   }
   
   .typing-demo {
-    width: 15ch;
+    width: 14ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -528,3 +525,16 @@ a:focus {
       border-color: transparent
     }
   }
+
+
+
+  /* Pills */
+/* active (faded) */
+.nav-pills .active {
+    background-color: grey !important;
+}
+  .nav-pills .nav-link:not(.active) {
+    background-color: #a17a5a;
+    opacity: 50% ;
+    color: white
+}
