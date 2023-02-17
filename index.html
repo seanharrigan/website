@@ -541,14 +541,36 @@ particlesJS("particles-js", {
 
 <!-- Sliding deck --> 
     </section>
-
-
+    
     <section id="cards">
       <div><h3 style="padding-top: 2%;  text-align: center; color: grey">Publications</h3></div>
       <hr>
 
-      <div class="box flex">
-          <div class="container-cards">
+      <!-- Desktop version -->
+      <div class="box flex hidden-mobile">
+          <div class="container-cards-desktop hidden-mobile">
+            <div class="panel active" style="background-image: url('./images/cid.png')">
+              <h3><a href="https://academic.oup.com/cid/article/76/3/e18/6679248?rss=1" style="color: white;">View</a></h3>
+            </div>
+            <div class="panel" style="background-image: url('./images/ubc-thesis.png')">
+              <h3><a href="https://open.library.ubc.ca/collections/ubctheses/24/items/1.0396872" style="color: white;">View</a></h3>
+            </div>
+            <div class="panel" style="background-image: url('./images/bmj.png')">
+              <h3><a href="https://bmjopen.bmj.com/content/12/10/e064804" style="color: white;">View</a></h3>
+            </div>
+            <div class="panel" style="background-image: url('./images/ijid.png')">
+              <h3><a href="https://www.ijidonline.com/article/S1201-9712(22)00639-7/fulltext" style="color: white;">View</a></h3>
+            </div>
+            <div class="panel" style="background-image: url('./images/springer.png')">
+              <h3><a href="https://link.springer.com/article/10.1007/s40266-020-00792-9" style="color: white;">View</a></h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile version -->
+
+        <div class="box flex hidden-desktop">
+          <div class="container-cards-desktop hidden-desktop">
             <div class="panel active" style="background-image: url('./images/cid.png')">
               <h3><a href="https://academic.oup.com/cid/article/76/3/e18/6679248?rss=1" style="color: white;">View</a></h3>
             </div>
@@ -575,7 +597,10 @@ particlesJS("particles-js", {
       
         
       <script src="js/cards.js"></script>
+
     </section>
+
+    
 
         
       <section id="awards" style="padding-top:10px; padding-bottom:30px">

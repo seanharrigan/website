@@ -396,10 +396,21 @@ a:focus {
   
 }
 
+
 .container-cards {
+    display: flex;
+    width: 80vw;
+  }
+
+.container-cards-mobile {
   display: flex;
   width: 80vw;
 }
+
+.container-cards-desktop {
+    display: flex;
+    width: 60vw;
+  }
 
 .panel {
   background-size: cover;
