@@ -515,7 +515,7 @@ a:focus {
   }
 
   .typing-demo-vis {
-    width: 16ch;
+    width: 17ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -525,7 +525,7 @@ a:focus {
   }
 
   .typing-demo-pkg {
-    width: 18ch;
+    width: 19ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -535,7 +535,7 @@ a:focus {
   }
 
   .typing-demo-render {
-    width: 19ch;
+    width: 20ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
@@ -544,6 +544,18 @@ a:focus {
     font-size: 2em;
   }
   
+  .typing-demo-title{
+    text-align: center;
+    width: 66ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.3em;
+  }
+  
+
   @keyframes typing {
     from {
       width: 0
