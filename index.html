@@ -282,20 +282,45 @@ particlesJS("particles-js", {
         </div>
 
         <!-- Skills section -->
-        <div class="row justify-content-md-center skills">
-          <div class="features-box col-lg-2" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
+        <!--Desktop-->
+
+        <div class="row justify-content-md-center skills hidden-mobile">
+          <div class="features-box col-lg-2 hidden-mobile" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
             <i class="fa-regular fa-flask fa-4x features-icon"></i>
             <h3>Methodology.</h3>
             <p class="features-text">In depth knowledge and practical experience in epidemiologic research methods and academic writing</p>
           </div>
   
-          <div class="features-box col-lg-2" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
+          <div class="features-box col-lg-2 hidden-mobile" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
             <i class="fa-solid fa-calculator fa-4x features-icon"></i>
             <h3 >Statistics.</h3>
             <p class="features-text">Application of statistics in scientific studies, including regression, survival, mediation and causal based methods</p>
           </div>
   
-          <div class="features-box col-lg-2" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
+          <div class="features-box col-lg-2 hidden-mobile" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
+            <i class="fa-solid fa-code fa-4x features-icon"></i>
+            <h3>Data science.</h3>
+            <p class="features-text">Data wrangling and vis, functional programming, creating analytical <br> 
+              piplines and machine learning techniques</p>
+          </div>
+        </div>
+
+        <!--Mobile-->
+
+        <div class="row justify-content-md-center skills hidden-desktop" style="padding-top: 0px; padding-bottom: 0px;">
+          <div class="features-box col-lg-2 hidden-desktop" style="padding: 0px 25px 50px">
+            <i class="fa-regular fa-flask fa-4x features-icon"></i>
+            <h3>Methodology.</h3>
+            <p class="features-text">In depth knowledge and practical experience in epidemiologic research methods and academic writing</p>
+          </div>
+  
+          <div class="features-box col-lg-2 hidden-desktop" style="padding: 25px 50px">
+            <i class="fa-solid fa-calculator fa-4x features-icon"></i>
+            <h3 >Statistics.</h3>
+            <p class="features-text">Application of statistics in scientific studies, including regression, survival, mediation and causal based methods</p>
+          </div>
+  
+          <div class="features-box col-lg-2 hidden-desktop" style="padding: 25px 50px">
             <i class="fa-solid fa-code fa-4x features-icon"></i>
             <h3>Data science.</h3>
             <p class="features-text">Data wrangling and vis, functional programming, creating analytical <br> 
@@ -501,20 +526,20 @@ particlesJS("particles-js", {
             <text font-size="13" text-anchor="left" x="175" y="45" fill="black">Minor in Statistics</text>
             <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="35" fill="#808080">UVic</text>
         
-            <line x1="150" y1="90" x2="150" y2="140" style="stroke:black; stroke-width:2.5" />
+            <line x1="150" y1="90" x2="150" y2="140" style="stroke:#a17a5a; stroke-width:2.5" />
             <circle cx="150" cy="155" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
             <text text-anchor="middle" x="115" y="160" fill="black">2021</text>
             <text font-size="13" text-anchor="left" x="175" y="120" fill="black">MSc in Epidemiology</text>
             <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="120" fill="#808080">UBC</text>
         
-            <line x1="150" y1="170" x2="150" y2="220" style="stroke:black; stroke-width:2.5" />
+            <line x1="150" y1="170" x2="150" y2="220" style="stroke:#a17a5a; stroke-width:2.5" />
             <circle cx="150" cy="235" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
             <text text-anchor="middle" x="115" y="240" fill="black">2022</text>
             <text font-size="13" text-anchor="left" x="175" y="190" fill="black">Certificate in Data Science,</text>
             <text font-size="13" text-anchor="left" x="175" y="210" fill="black">Programming in Python</text>
             <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="200" fill="#808080">UBC</text>
         
-            <line x1="150" y1="250" x2="150" y2="300" style="stroke:black; stroke-width:2.5" />
+            <line x1="150" y1="250" x2="150" y2="300" style="stroke:#a17a5a; stroke-width:2.5" />
             <circle cx="150" cy="315" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
             <text text-anchor="middle" x="115" y="320" fill="black">2023</text>
             <text font-size="13" text-anchor="left" x="175" y="270" fill="black">Decision Modeling in Health</text>
@@ -523,7 +548,7 @@ particlesJS("particles-js", {
             <text style="font-style: italic" font-size="13" text-anchor="right" x="77" y="290" fill="#808080">University</text>
         
         
-            <line x1="150" y1="330" x2="150" y2="380" style="stroke:black; stroke-width:2.5" />
+            <line x1="150" y1="330" x2="150" y2="380" style="stroke:#a17a5a; stroke-width:2.5" />
             <text font-size="13" text-anchor="left" x="175" y="350" fill="black">Certificate in Machine</text>
             <text font-size="13" text-anchor="left" x="175" y="370" fill="black">Learning and AI</text>
             <text style="font-style: italic" font-size="13" text-anchor="right" x="100" y="360" fill="#808080">U of T</text>
@@ -599,8 +624,48 @@ particlesJS("particles-js", {
       <script src="js/cards.js"></script>
 
     </section>
+    <section id="code">
+      <div>
+        <div class="wrapper">
+          <div class="typing-demo">
+            {r, code-div}
+          </div>
+      </div>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...jksdfjklsdjf</div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+        </div>
+        <div>
+                <!-- Centered Tabs -->
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+          </ul>
 
-    
+          <!-- Centered Pills -->
+          <ul class="nav nav-pills nav-justified">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
         
       <section id="awards" style="padding-top:10px; padding-bottom:30px">
