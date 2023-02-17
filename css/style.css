@@ -564,7 +564,7 @@ a:focus {
 
   .typing-demo-title-mob1{
     text-align: center;
-    width: 28ch;
+    width: 40ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
