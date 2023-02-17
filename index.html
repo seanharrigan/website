@@ -34,7 +34,7 @@
 </head>
 <body>
 <section class="sa" id="home">
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark"  style="background: linear-gradient(#93BFCF 0%, #93BFCF  20%, #93BFCF  0%, white 100%)">
     <a class="navbar-brand" style="color:white; opacity:0.9" href="">Epi & Data Sci.</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,7 @@
 <section class="section home-5-bg" id="home">
     <div id="particles-js"></div>
     <div class="bg-overlay"></div>
-    <div class="home-center">
+    <div class="home-center"> <!--style="background-color: red; background: linear-gradient(white 0%,  grey 60%, grey 100%)">-->
         <div class="home-desc-center">
             <div class="container">
                 <div class="justify-content-center row">
@@ -264,13 +264,13 @@ particlesJS("particles-js", {
     <section id="about">
 
       <div class="about-me row justify-content-md-center">
-        <div class="aboutme features-box col-lg-3 ">
+        <div class="aboutme features-box col-lg-3" >
           <img class='sean-img' src="images/sean-modified.png" alt="sean-photo"> 
         </div>
 
-        <div class="aboutme features-box col-lg-4">
+        <div class="aboutme features-box col-lg-5">
           <!--<i class="fa-solid fa-calculator fa-4x features-icon"></i> -->
-          <h3 class="features-title">About me.</h3>
+          <h3 >About me.</h3>
           <hr >
           <p class="features-text" style="text-align: justify;">My name is Sean, I am en epidemiologist working for the UBC and BC Centres for Disease Control in Vancouver, British Columbia. 
             My recent work focuses on COVID-19 variant severity.
@@ -283,22 +283,22 @@ particlesJS("particles-js", {
 
         <!-- Skills section -->
         <div class="row justify-content-md-center skills">
-          <div class="features-box col-lg-3">
+          <div class="features-box col-lg-2" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
             <i class="fa-regular fa-flask fa-4x features-icon"></i>
-            <h3 class="features-title">Methodology.</h3>
+            <h3>Methodology.</h3>
             <p class="features-text">In depth knowledge and practical experience in epidemiologic research methods and academic writing</p>
           </div>
   
-          <div class="features-box col-lg-3">
+          <div class="features-box col-lg-2" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
             <i class="fa-solid fa-calculator fa-4x features-icon"></i>
-            <h3 class="features-title">Statistics.</h3>
+            <h3 >Statistics.</h3>
             <p class="features-text">Application of statistics in scientific studies, including regression, survival, mediation and causal based methods</p>
           </div>
   
-          <div class="features-box col-lg-3">
+          <div class="features-box col-lg-2" style="margin-right: 50px; margin-left: 50px; font-size: 0.9em;">
             <i class="fa-solid fa-code fa-4x features-icon"></i>
-            <h3 class="features-title">Data science.</h3>
-            <p class="features-text">Data wrangling and visualisaiton, fucntional programming, creating analytical <br> 
+            <h3>Data science.</h3>
+            <p class="features-text">Data wrangling and vis, functional programming, creating analytical <br> 
               piplines and machine learning techniques</p>
           </div>
         </div>
@@ -450,7 +450,7 @@ particlesJS("particles-js", {
         <p><br class="hidden-mobiles"></p>
         <div class="col-lg-12 text-center hidden-mobile ">
           <svg width="1000" height="100">
-            <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
+            <line x1="0" y1="50" x2="1000" y2="50" style="stroke:#a17a5a;; stroke-width:1.5" />
 
             <circle cx="150" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
             <text text-anchor="middle" x="150" y="80" fill="black">2019</text>
@@ -494,7 +494,7 @@ particlesJS("particles-js", {
           
           <svg width="400" height="375">
 
-            <line x1="150" y1="0" x2="150" y2="60" style="stroke:black; stroke-width:2.5" />
+            <line x1="150" y1="0" x2="150" y2="60" style="stroke:#a17a5a; stroke-width:2.5" />
             <circle cx="150" cy="75" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
             <text text-anchor="middle" x="115" y="80" fill="black">2019</text>
             <text font-size="13" text-anchor="left" x="175" y="25" fill="black">BSc in Biology</text>
@@ -610,8 +610,8 @@ particlesJS("particles-js", {
         <p><br></p>
 
         <div class="container">
-          <div class="row">
-          <div class="col-lg-4 mb-4">
+          <div class="row justify-content-md-center">
+          <div class="col-lg-5">
           <div class="card">
             <img src="images/cihr.png" alt="" class="card-img-top">
             <div class="card-body">
@@ -629,7 +629,7 @@ particlesJS("particles-js", {
             </div>
            </div>
           </div>
-        <div class="col-lg-4 mb-4">
+        <div class="col-lg-5">
         <div class="card">
             <img src="images/watters.png" alt="" class="card-img-top">
             <div class="card-body">
@@ -646,8 +646,8 @@ particlesJS("particles-js", {
             </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-4">
-          <div class="card">
+          <div class="col-lg-5">
+          <div class="card" style="margin-top: 30px">
             <img src="images/posh.png" alt="" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Dr. Annalee Yassi & Team is being recognized for her COVID-19 project serving front line workers</h5>
@@ -663,6 +663,23 @@ particlesJS("particles-js", {
             </div>
            </div>
           </div>
+          <div class="col-lg-5">
+            <div class="card" style="margin-top: 30px">
+              <img src="images/posh.png" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Dr. Annalee Yassi & Team is being recognized for her COVID-19 project serving front line workers</h5>
+                <p class="card-text awards-text">
+                  Early in the COVID-19 pandemic, Dr. Yassi's team was called upon by Vancouver Coastal Health (VCH) to assist with 
+                  occupational health of VCH health workers and to create and manage a unit focused on the occupational needs of physicians.
+                  <br> <br>
+                  “As an epidemiology student studying breast cancer prevention, when the pandemic 
+                  hit, I knew I wanted the chance to help the community with the skill set I have learned over my degree. POSH gave me the 
+                  opportunity to contribute by managing and analyzing COVID-19 exposure in real time.” <br> - Sean Harrigan</p>
+               <a href="https://spph.ubc.ca/yassi-covid-19-serving-front-line-workers/" class="btn btn-info btn-sm" style="color:white" >Read More</a>
+               <a href="http://ipac.vch.ca/Documents/COVID-19/Workplace%20Health_POSH/_What%20is%20POSH.PDF" class="btn btn-dark btn-sm" style="color:white" >Description</a>
+              </div>
+             </div>
+            </div>
         </div>
       </div>
       </section>
