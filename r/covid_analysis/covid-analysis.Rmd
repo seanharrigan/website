@@ -159,29 +159,29 @@ map
 # Vaccination
 vax_plot <- 
 vax %>% 
-  select(prov = prename, partial = proptotal_partially, 
-         full = proptotal_fully, date = week_end) %>% 
+  select(prov = prename, Partially = proptotal_partially, 
+         Fully = proptotal_fully, date = week_end) %>% 
   filter(prov ==  'Canada') %>% 
-  mutate(full = as.numeric(ifelse(full == '<0.1', 0, full))) %>% 
-  mutate(full = as.numeric(ifelse(full == '<0.1', 0, full))) %>% 
+  mutate(Fully = as.numeric(ifelse(Fully == '<0.1', 0, Fully))) %>% 
   filter(date >= '2021-01-01' & date <= '2021-12-31')  %>% 
-pivot_longer(c(partial, full), names_to = 'vax', values_to = 'prop') %>% 
-ggplot(aes(x=date, y = prop, fill = vax)) +
-  geom_area(alpha = 0.5) + 
-  theme_minimal() + 
-  labs(x = NULL, 
-       y = '% Vaccinated',
-       color = NULL,
-       title = NULL) + 
-  theme(legend.position = "none", 
-        plot.title = element_text(hjust = 0.5),
-        axis.title.y= element_text(color = 'black', size = 10, margin = margin(r  = 10)),
-        axis.text.y = element_text(color = 'white'),
-        panel.grid.major.y = element_blank(),
-        panel.grid.minor.y =element_blank()) +
-  scale_x_date(breaks = "2 month", date_labels = "%b",
-               minor_breaks = '1 month',
-               expand = c(0, 0))
+  pivot_longer(c(Partially, Fully), names_to = 'vax', values_to = 'prop') %>% 
+  ggplot(aes(x=date, y = prop, fill = vax)) +
+    geom_area(alpha = 0.5) + 
+    theme_minimal() + 
+    labs(x = NULL, 
+         y = '% Vaccinated',
+         fill = NULL,
+         title = NULL) + 
+    theme(plot.title = element_text(hjust = 0.5),
+          axis.title.y= element_text(color = 'black', size = 10, margin = margin(r  = 10)),
+          legend.position = c(0.2, 0.88),
+          legend.direction="horizontal",
+          legend.title = element_text(size = 9)) +
+    scale_x_date(breaks = "2 month", date_labels = "%b",
+                 minor_breaks = '1 month',
+                 expand = c(0, 0)) +
+      guides(fill = guide_legend(title.position = "top")) 
+
 
 
 vax_plot
