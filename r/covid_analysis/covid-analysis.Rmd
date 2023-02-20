@@ -142,11 +142,13 @@ rates_join %>%
   geom_polygon() +
   coord_fixed() +
   theme_mapcan() + 
-  scale_fill_viridis_c(name = "Mortality rate / 1,000") +
+  scale_fill_viridis_c(name = "Mortality rate / 100K") +
   guides(fill = guide_colourbar(title.position = "top")) + 
   theme(legend.position = c(0.7, 0.75),
         legend.direction="horizontal",
         legend.title = element_text(size = 9))
+
+map
 
 ```
 
@@ -180,6 +182,9 @@ ggplot(aes(x=date, y = prop, fill = vax)) +
   scale_x_date(breaks = "2 month", date_labels = "%b",
                minor_breaks = '1 month',
                expand = c(0, 0))
+
+
+vax_plot
   
 ```
 
