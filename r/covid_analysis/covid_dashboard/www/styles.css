@@ -1,0 +1,13 @@
+body { background-color: #ffffff !important;; }
+h1 {text-align: center !important;}
+h3 {text-align: center !important;}
+.container-fluid { background-color: #fff; width: 1100px; padding: 60px}
+.topimg { width: 120px; display: block; margin: 0px auto 40px auto; }
+.title { text-align: center; }
+.toprow { margin: 60px 0px; padding: 30px; background-color: #ffffff; }
+.filters { margin: 0px auto; }
+.shiny-input-container { width:100% !important; }
+.table { padding: 30px; margin-top: 30px; }
+.leaflet-top { z-index:999 !important; }
+.ramen-img {height=50%; width=50%; align=center; text-align: center}
+

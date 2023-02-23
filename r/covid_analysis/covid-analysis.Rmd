@@ -16,6 +16,7 @@ library(ggpubr)
 library(mapcan)
 library(patchwork)
 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 
 # Data: https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc
 cov <- read_csv("./data/covid19-canada.csv")
@@ -64,7 +65,7 @@ voc_plot
 ```
 
 
-## Plot o ftimeline of VOCs
+## Plot of timeline of VOCs
 ```{r voc}
 
 # VOCs
@@ -107,7 +108,7 @@ timeline_plot
 
 ```
 
-## Map of CVID-19 mortality rates
+## Map of COVID-19 mortality rates
 The section below uses the package `canmap` to plot the map of rates by province
 ```{r map}
 
@@ -154,7 +155,7 @@ map
 
 
 
-## Vaccination 
+## Plot of proportion vaccinated
 ```{r vax}
 # Vaccination
 vax_plot <- 
