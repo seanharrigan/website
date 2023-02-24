@@ -113,6 +113,16 @@ text-align: center;
 }
 
 
+/*  Transition div */
+.transition-white-blue { 
+  height:150px; 
+  background: linear-gradient(white, 50%, #E0ECF1 100%)
+}
+
+.transition-blue-white { 
+  height:150px; 
+  background: linear-gradient(#E0ECF1, 50%, white 100%)
+}
 
 /* Accoridan */
 .accordion{
@@ -261,8 +271,8 @@ background-color: #B4957C !important;
 
 #testimonials {
     text-align: center;
-    background-color: #93BFCF;
-    color: #fff;
+    background-color: white;/*#93BFCF;*/
+    color: #666/*#fff;*/;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -375,7 +385,7 @@ a:focus {
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 #cards {
-    background-color:#d7edf5;
+    background-color: #E0ECF1; /*#d7edf5;*/
     padding-top: 50px ;
     padding-bottom: 50px 
 }
