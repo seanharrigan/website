@@ -623,6 +623,7 @@ a:focus {
 
 
 /* Table */
+
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -635,9 +636,10 @@ a:focus {
 }
 
 .styled-table thead tr {
-    background-color: lightblue;
-    color: #ffffff;
-    text-align: left;
+    background-color: #E0ECF1;
+    color: #636363;
+    text-align: center;
+
 }
 
 .styled-table th,
@@ -685,4 +687,11 @@ color: darkgrey
   content: '<';
   font-size: 25px;
   color: darkgrey;
+}
+
+
+
+/* Code div */
+.code-text {
+  color: #808080;
 }
