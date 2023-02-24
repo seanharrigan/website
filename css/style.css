@@ -676,13 +676,13 @@ color: darkgrey
 
 .carousel-control-next-icon:after
 {
-  content: '▶';
+  content: '>';
   font-size: 25px;
   color: darkgrey;
 }
 
 .carousel-control-prev-icon:after {
-  content: '◀';
+  content: '<';
   font-size: 25px;
   color: darkgrey;
 }
