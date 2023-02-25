@@ -642,196 +642,182 @@ particlesJS("particles-js", {
     <div class="transition-blue-white"></div>
 
     <!--Code div-->
-    <section id="code">
-      <div>
-        <div class="wrapper">
-          <div class="typing-demo">
-            {r, code-div}
-          </div>
-      </div>
-
-      <div class="row justify-content-md-center skills" style="padding-top: 0px">
-        <div class="features-box col-lg-7" >
-        <ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist" style="padding-bottom: 7px">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Languages</button>
-          </li>
-          <li class="nav-item" role="presentation" style="padding-bottom: 7px">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Visualisaiton</button>
-          </li>
-          <li class="nav-item" role="presentation" style="padding-bottom: 7px">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Dashboard</button>
-          </li>
-          <li class="nav-item" role="presentation" style="padding-bottom: 7px">
-            <button class="nav-link" id="pills-contact2-tab" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact2" aria-selected="false">Generated reports</button>
-          </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <p class="code-text" style="padding: 20px; text-align: justify;">
-              I have a passion for coding and using a variety of tools to accomplish my work efficiently.
-              I have experience with a variety of languages and have used them in many projects, 
-              but my language of choice for analysis is R. To me, <strong>reproducibility</strong> is key, so optimising my
-              code and workflow is always a priority. 
-            </p>
-
-              <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Language</th>
-                        <th>Ability level</th>
-                        <th>Experience</th>
-                    </tr>
-                </thead>
-                <tbody class="code-text" >
-                    <tr>
-                        <td>R</td>
-                        <td>Experienced</td>
-                        <td>
-                          <p>
-                            I worked in R on a daily basis in my current role, exploring data, running analyses and modelling. 
-                            I enjoy learning new things in R and implementing them in my work, whether thats in full automated 
-                            mansucripts using Rmarkdown, creating functions to run complex analyses, or creating infomrative 
-                            visualisations.
-                          </p>
-                          <ul>
-                            <li>Data manipulation and wranngling</li>
-                            <li>Statistical and epidemiologic analysis</li>
-                            <li>Skilled at data visualisaiton and figure creation for manuscritps</li>
-                            <li>Dashboards using Shiny</li>
-                            <li>Creating R packages for work optimsation</li>
-                            <li>Generating full reports and manuscripts from analysis pipelines</li>
-                          </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>Intermediate</td>
-                        <td>
-                          <p>I have worked in Python during the Certificate Programs in Data Science at UBC and Machine Learning
-                            Artificial Intelligence at U of T. 
+    <div class="site-wrapper">
+      <section class="tabs-wrapper">
+        <div class="tabs-container">
+          <div class="tabs-block">
+            <div class="tabs">
+              <input type="radio" name="tabs" id="tab1" checked="checked" />
+              <label for="tab1"> <span><i class="fa-solid fa-chart-pie"></i></span> <span style="padding-left:10px">Data Vis</span></label>
+              <div class="tab">
+                <div class="typing-demo-vis">
+                  > library(ggplot2) 
+                </div>
+                  <p class="code-text"  style="padding: 20px; text-align: justify">
+                    Data can be complicated to understand, therefore being able to provide concise and easy to understand data visualisations is key 
+                    to data exploration and in final manuscripts and deliverables. I have a passion for creating appealing and infomrative 
+                    figures to better help interpret the data.
+                    <br>
+                    <br> 
+                    The COVID-19 pandemic produced large amounts of data. In the example figure below, I tried to summarise the pandemic from 
+                    a Canadian perspective in a single figure. I have created this figure below using ggplot2 in R. This was figure was made using public data from 
+                    <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a>.
+                    <br>
+                    <br>
+                    <a href="r/covid_analysis/covid-analysis.html">See full code here.</a>
+                  </p>
+                    <img src="images/epi-plot-full.png" alt="" class="card-img-top" style ="padding-left: 20px; padding-right: 20px ">
+              </div>
+    
+              <input type="radio" name="tabs" id="tab2" />
+              <label for="tab2"><span><i class="fa-solid fa-chart-line"></i></span> <span style="padding-left:10px">Dashboard</span></label>
+              <div class="tab">
+                <div class="typing-demo-pkg">
+                  > library(shiny)
+                </div>
+                <p class="code-text"  style="padding: 20px; text-align: justify">
+                  Sometimes a static image isn't enough to tease about the data. In this case an interactive dahsboard may be 
+                  the solution. I enjoy bringing my figures to life creating web app dashboards using Shiny in R.
+                  <br>
+                  <br>
+                  The dahsboard below was created in R using Shiny and was styled using CSS. The dashboard allows the user to
+                  look at infections, vaccination and mortality rate by specific province and year. Again, the data was taken from 
+                  the <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a> website.
+    
+                  <p>
+                  <a class="btn btn-secondary" style="color:white" href="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432">Visit Dashboard</a>
+                  <br>
+                  </p>
+                  <iframe height="850" width="100%" frameborder="no" src="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432"> </iframe>
+              </div>
+    
+              <input type="radio" name="tabs" id="tab3" />
+              <label for="tab3"><span> <i class="fa-solid fa-pencil"></i></span> <span style="padding-left:10px">Reporting</span></label>
+              <div class="tab">
+                <div class="typing-demo-render" style = "padding-left: 10px;">
+                  > rmarkdown::render() 
+                </div>
+                  <p class="code-text" style="padding: 20px; text-align: justify">
+                    Analysis is only one aspect of good research. The other important aspect is being able to commucate the results effectively.
+                    When working on a project, I focus on building an efficient workflow with the final product being an automated report / 
+                    manuscript to easily share the results with colleagues. This allows small changes to the study population inclusion criteria  
+                    or statistical anlayses to be easily implemented and to create an updated report. 
+                  </p>
+                  <iframe height="850" width="100%" frameborder="no" src="r/covid_analysis/covid_manuscript.html"> </iframe>
+    
+              </div>
+    
+              <input type="radio" name="tabs" id="tab4" />
+              <label for="tab4"><span><i class="fa-solid fa-code"></i></span> <span style="padding-left:10px">Languages</span></label>
+              <div class="tab">
+                <h2>Coding languages</h2>
+                <p class="code-text" style="padding: 20px; text-align: justify;">
+                  I have a passion for coding and using a variety of tools to accomplish my work efficiently.
+                  I have experience with a variety of languages and have used them in many projects, 
+                  but my language of choice for analysis is R. To me, <strong>reproducibility</strong> is key, so optimising my
+                  code and workflow is always a priority. 
+                </p>
+    
+                  <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Language</th>
+                            <th>Ability level</th>
+                            <th>Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody class="code-text" >
+                        <tr>
+                            <td>R</td>
+                            <td>Experienced</td>
+                            <td>
+                              <p>
+                                I worked in R on a daily basis in my current role, exploring data, running analyses and modelling. 
+                                I enjoy learning new things in R and implementing them in my work, whether thats in full automated 
+                                mansucripts using Rmarkdown, creating functions to run complex analyses, or creating infomrative 
+                                visualisations.
+                              </p>
+                              <ul>
+                                <li>Data manipulation and wranngling</li>
+                                <li>Statistical and epidemiologic analysis</li>
+                                <li>Skilled at data visualisaiton and figure creation for manuscritps</li>
+                                <li>Dashboards using Shiny</li>
+                                <li>Creating R packages for work optimsation</li>
+                                <li>Generating full reports and manuscripts from analysis pipelines</li>
+                              </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>Intermediate</td>
+                            <td>
+                              <p>I have worked in Python during the Certificate Programs in Data Science at UBC and Machine Learning
+                                Artificial Intelligence at U of T. 
+                                <ul>
+                                  <li>Experience in data science, data manipulation and wrangling using Pandas</li>
+                                  <li>Data visualisation using Altair</li>
+                                  <li>
+                                    Proficient in machine learning analyses using Scikit-Learn
+                                     including supervised and unsupervised, neural networks, etc. 
+                                  </li>
+                                </ul>
+                              </p>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td>HTML / CSS</td>
+                          <td>Intermediate</td>
+                          <td> 
+                            <p>
+                              I have experince using HTML and CSS in designing this website and applying these skills to create 
+                              visually appealing Shiny dashboards and HTML output for automated reports using Rmarkdown. 
+                            </p>
+                              <ul>
+                                <li>Knowledge in creating basic website layout content</li>
+                                <li>Use of CSS styling to create viusally apealing products</li>
+                                <li>Use of Bootstrap to create nice loooking HTML layouts</li>
+                              </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Command line (Bash)</td>
+                          <td>Intermediate</td>
+                          <td>
+                            <p>
+                              Use of command line to implement version control, navigating directories and and running automated 
+                              analysis pipelines using Make.
+                            </p>
                             <ul>
-                              <li>Experience in data science, data manipulation and wrangling using Pandas</li>
-                              <li>Data visualisation using Altair</li>
-                              <li>
-                                Proficient in machine learning analyses using Scikit-Learn
-                                 including supervised and unsupervised, neural networks, etc. 
-                              </li>
+                              <li>Knowledgein Bash to navigate directories, create </li>
+                              <li>Using Git version control </li>
+                              <li>Use of Make and Sankemake as a workflow organisation to 
+                                automate analysis pipelines
+                               </li>
                             </ul>
-                          </p>
-                        </td>
-                    </tr>
-                    <tr>
-                      <td>HTML / CSS</td>
-                      <td>Intermediate</td>
-                      <td> 
-                        <p>
-                          I have experince using HTML and CSS in designing this website and applying these skills to create 
-                          visually appealing Shiny dashboards and HTML output for automated reports using Rmarkdown. 
-                        </p>
-                          <ul>
-                            <li>Knowledge in creating basic website layout content</li>
-                            <li>Use of CSS styling to create viusally apealing products</li>
-                            <li>Use of Bootstrap to create nice loooking HTML layouts</li>
-                          </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Command line (Bash)</td>
-                      <td>Intermediate</td>
-                      <td>
-                        <p>
-                          Use of command line to implement version control, navigating directories and and running automated 
-                          analysis pipelines using Make.
-                        </p>
-                        <ul>
-                          <li>Knowledgein Bash to navigate directories, create </li>
-                          <li>Using Git version control </li>
-                          <li>Use of Make and Sankemake as a workflow organisation to 
-                            automate analysis pipelines
-                           </li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td>SQL</td>
-                      <td>Basic</td>
-                      <td>
-                        <p>
-                          Use of SQL to query large databases
-                        </p>
-                        <ul>
-                          <li>Using SQL to filter, select and join datasets to import
-                            into R for analyses </li>
-                        </ul>
-                      </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-          
-          </div>
-          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-            <div class="typing-demo-vis">
-              > library(ggplot2) 
-            </div>
-            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-              See code
-            </button>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>SQL</td>
+                          <td>Basic</td>
+                          <td>
+                            <p>
+                              Use of SQL to query large databases
+                            </p>
+                            <ul>
+                              <li>Using SQL to filter, select and join datasets to import
+                                into R for analyses </li>
+                            </ul>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+    
               </div>
             </div>
-              <p class="code-text"  style="padding: 20px; text-align: justify">
-                Data can be complicated to understand, therefore being able to provide concise and easy to understand data visualisations is key 
-                to data exploration and in final manuscripts and deliverables. I have a passion for creating appealing and infomrative 
-                figures to better help interpret the data.
-                <br>
-                <br> 
-                The COVID-19 pandemic produced large amounts of data. In the example figure below, I tried to summarise the pandemic from 
-                a Canadian perspective in a single figure. I have created this figure below using ggplot2 in R. This was figure was made using public data from 
-                <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a>.
-                <br>
-                <br>
-                <a href="r/covid_analysis/covid-analysis.html">See full code here.</a>
-              </p>
-                <img src="images/epi-plot-full.png" alt="" class="card-img-top" style ="padding-left: 20px; padding-right: 20px ">
-          </div>
-          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <div class="typing-demo-pkg">
-              > library(shiny)
-            </div>
-            <p class="code-text"  style="padding: 20px; text-align: justify">
-              Sometimes a static image isn't enough to tease about the data. In this case an interactive dahsboard may be 
-              the solution. I enjoy bringing my figures to life creating web app dashboards using Shiny in R.
-              <br>
-              <br>
-              The dahsboard below was created in R using Shiny and was styled using CSS. The dashboard allows the user to
-              look at infections, vaccination and mortality rate by specific province and year. Again, the data was taken from 
-              the <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a> website.
-
-              <p>
-              <a class="btn btn-secondary" style="color:white" href="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432">Visit Dashboard</a>
-              <br>
-              </p>
-              <iframe height="850" width="100%" frameborder="no" src="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432"> </iframe>
-          </div>
-          <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact-tab">
-            <div class="typing-demo-render" style = "padding-left: 10px;">
-              > rmarkdown::render() 
-            </div>
-              <p class="code-text" style="padding: 20px; text-align: justify">
-                Analysis is only one aspect of good research. The other important aspect is being able to commucate the results effectively.
-                When working on a project, I focus on building an efficient workflow with the final product being an automated report / 
-                manuscript to easily share the results with colleagues. This allows small changes to the study population inclusion criteria  
-                or statistical anlayses to be easily implemented and to create an updated report. </p>
           </div>
         </div>
-      </div>
-      </div>
-      
-    </section>
+      </section>
+    </div>
 
     <div class="transition-white-blue" ></div>
    
@@ -1010,188 +996,6 @@ particlesJS("particles-js", {
   &nbsp;
 
 </section>
-
-
-
-<div class="site-wrapper">
-  <section class="tabs-wrapper">
-    <div class="tabs-container">
-      <div class="tabs-block">
-        <div class="tabs">
-          <input type="radio" name="tabs" id="tab1" checked="checked" />
-          <label for="tab1"> <span><i class="fa-solid fa-chart-pie"></i></span> <span style="padding-left:10px">Data Vis</span></label>
-          <div class="tab">
-            <div class="typing-demo-vis">
-              > library(ggplot2) 
-            </div>
-              <p class="code-text"  style="padding: 20px; text-align: justify">
-                Data can be complicated to understand, therefore being able to provide concise and easy to understand data visualisations is key 
-                to data exploration and in final manuscripts and deliverables. I have a passion for creating appealing and infomrative 
-                figures to better help interpret the data.
-                <br>
-                <br> 
-                The COVID-19 pandemic produced large amounts of data. In the example figure below, I tried to summarise the pandemic from 
-                a Canadian perspective in a single figure. I have created this figure below using ggplot2 in R. This was figure was made using public data from 
-                <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a>.
-                <br>
-                <br>
-                <a href="r/covid_analysis/covid-analysis.html">See full code here.</a>
-              </p>
-                <img src="images/epi-plot-full.png" alt="" class="card-img-top" style ="padding-left: 20px; padding-right: 20px ">
-          </div>
-
-          <input type="radio" name="tabs" id="tab2" />
-          <label for="tab2"><span><i class="fa-solid fa-chart-line"></i></span> <span style="padding-left:10px">Dashboard</span></label>
-          <div class="tab">
-            <div class="typing-demo-pkg">
-              > library(shiny)
-            </div>
-            <p class="code-text"  style="padding: 20px; text-align: justify">
-              Sometimes a static image isn't enough to tease about the data. In this case an interactive dahsboard may be 
-              the solution. I enjoy bringing my figures to life creating web app dashboards using Shiny in R.
-              <br>
-              <br>
-              The dahsboard below was created in R using Shiny and was styled using CSS. The dashboard allows the user to
-              look at infections, vaccination and mortality rate by specific province and year. Again, the data was taken from 
-              the <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a> website.
-
-              <p>
-              <a class="btn btn-secondary" style="color:white" href="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432">Visit Dashboard</a>
-              <br>
-              </p>
-              <iframe height="850" width="100%" frameborder="no" src="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432"> </iframe>
-          </div>
-
-          <input type="radio" name="tabs" id="tab3" />
-          <label for="tab3"><span> <i class="fa-solid fa-pencil"></i></span> <span style="padding-left:10px">Reporting</span></label>
-          <div class="tab">
-            <div class="typing-demo-render" style = "padding-left: 10px;">
-              > rmarkdown::render() 
-            </div>
-              <p class="code-text" style="padding: 20px; text-align: justify">
-                Analysis is only one aspect of good research. The other important aspect is being able to commucate the results effectively.
-                When working on a project, I focus on building an efficient workflow with the final product being an automated report / 
-                manuscript to easily share the results with colleagues. This allows small changes to the study population inclusion criteria  
-                or statistical anlayses to be easily implemented and to create an updated report. 
-              </p>
-              <iframe height="850" width="100%" frameborder="no" src="r/covid_analysis/covid_manuscript.html"> </iframe>
-
-          </div>
-
-          <input type="radio" name="tabs" id="tab4" />
-          <label for="tab4"><span><i class="fa-solid fa-code"></i></span> <span style="padding-left:10px">Languages</span></label>
-          <div class="tab">
-            <h2>Coding languages</h2>
-            <p class="code-text" style="padding: 20px; text-align: justify;">
-              I have a passion for coding and using a variety of tools to accomplish my work efficiently.
-              I have experience with a variety of languages and have used them in many projects, 
-              but my language of choice for analysis is R. To me, <strong>reproducibility</strong> is key, so optimising my
-              code and workflow is always a priority. 
-            </p>
-
-              <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Language</th>
-                        <th>Ability level</th>
-                        <th>Experience</th>
-                    </tr>
-                </thead>
-                <tbody class="code-text" >
-                    <tr>
-                        <td>R</td>
-                        <td>Experienced</td>
-                        <td>
-                          <p>
-                            I worked in R on a daily basis in my current role, exploring data, running analyses and modelling. 
-                            I enjoy learning new things in R and implementing them in my work, whether thats in full automated 
-                            mansucripts using Rmarkdown, creating functions to run complex analyses, or creating infomrative 
-                            visualisations.
-                          </p>
-                          <ul>
-                            <li>Data manipulation and wranngling</li>
-                            <li>Statistical and epidemiologic analysis</li>
-                            <li>Skilled at data visualisaiton and figure creation for manuscritps</li>
-                            <li>Dashboards using Shiny</li>
-                            <li>Creating R packages for work optimsation</li>
-                            <li>Generating full reports and manuscripts from analysis pipelines</li>
-                          </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>Intermediate</td>
-                        <td>
-                          <p>I have worked in Python during the Certificate Programs in Data Science at UBC and Machine Learning
-                            Artificial Intelligence at U of T. 
-                            <ul>
-                              <li>Experience in data science, data manipulation and wrangling using Pandas</li>
-                              <li>Data visualisation using Altair</li>
-                              <li>
-                                Proficient in machine learning analyses using Scikit-Learn
-                                 including supervised and unsupervised, neural networks, etc. 
-                              </li>
-                            </ul>
-                          </p>
-                        </td>
-                    </tr>
-                    <tr>
-                      <td>HTML / CSS</td>
-                      <td>Intermediate</td>
-                      <td> 
-                        <p>
-                          I have experince using HTML and CSS in designing this website and applying these skills to create 
-                          visually appealing Shiny dashboards and HTML output for automated reports using Rmarkdown. 
-                        </p>
-                          <ul>
-                            <li>Knowledge in creating basic website layout content</li>
-                            <li>Use of CSS styling to create viusally apealing products</li>
-                            <li>Use of Bootstrap to create nice loooking HTML layouts</li>
-                          </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Command line (Bash)</td>
-                      <td>Intermediate</td>
-                      <td>
-                        <p>
-                          Use of command line to implement version control, navigating directories and and running automated 
-                          analysis pipelines using Make.
-                        </p>
-                        <ul>
-                          <li>Knowledgein Bash to navigate directories, create </li>
-                          <li>Using Git version control </li>
-                          <li>Use of Make and Sankemake as a workflow organisation to 
-                            automate analysis pipelines
-                           </li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr >
-                      <td>SQL</td>
-                      <td>Basic</td>
-                      <td>
-                        <p>
-                          Use of SQL to query large databases
-                        </p>
-                        <ul>
-                          <li>Using SQL to filter, select and join datasets to import
-                            into R for analyses </li>
-                        </ul>
-                      </td>
-                    </tr>
-                </tbody>
-            </table>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="credits"><a href="https://htmlcssfreebies.com/pure-html-css-tabs/" target="_blank">Pure HTML CSS Tabs</a> by HTMLCSSFreebies.</div>
-  </footer>
-</div>
 
 </body>
 

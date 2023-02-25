@@ -759,7 +759,7 @@ color: darkgrey
    background-color: #fff;
    color: #A17A5A;
    border-top: 4px solid #A17A5A;
-   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
  }
  
  .tabs [type=radio]:checked + label + .tab {
