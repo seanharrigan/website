@@ -3,27 +3,31 @@ body {
     color: black;
     text-align: justify;
   }
+
+p {
+  color: #808080;
+}  
+  
+h1 {
+  color: #2C3E50;
+  font-size: 20pt !important;
+}
+  
+.title {
+  color: #2C3E50;
+  text-align: center;
+  line-height: 1.6;
+  padding: 60px;
+}
   
   
-  h1 {
-    color: #2C3E50;
-  }
-  
-  .title {
-    color: #2C3E50;
-    text-align: center;
-    line-height: 1.6;
-    padding: 60px;
-  }
-  
-  
-  h2 {
-    color: #0081C9;
-  }
-  
-  h3 {
-    color: #5BC0F8;
-  }
+h2 {
+  color: #0081C9;
+}
+
+h3 {
+  color: #5BC0F8;
+}
 
 h4 {
     text-align: center;
@@ -35,81 +39,80 @@ h4 {
   padding-bottom: 30px;
 }
   
-  caption {
-    font-size: 1em;
-    font-style: italic;
-    color: grey;
-    margin-right: 10%;
-    margin-left: 0%;  
-    text-align: justify;
-  }
-  
-  p.caption {
-    font-size: 1em;
-    font-style: italic;
-    color: grey;
-    margin-right: 10%;
-    margin-left: 0%;  
-    text-align: justify;
-  }
-  
-  
-  
-  
-  /* unvisited link */
-  a:link {
-    color: #C21010;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: #C21010;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: #E64848;
-  }
-  
-  /* selected link */
-  a:active {
-    color: #E64848;
-  }
-  
-  /*----------
-  div.main-container {
-    max-width: 1600px !important;
-  }
-   ---------*/
-   
-  hr {
-      width:35%;
-      margin:0 auto;
-  }
-  
-  
-  
-   /*------------Table of Contents (TOC)----------- */
-  
-  
-  
-  #TOC::before {
-    content: "";
-    display: block;
-    height: 200px;
-    margin: 20px 20px 40px 20px;
-    background-image: url("covid_dashboard/covid.png");
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-  
-  
-  .tocify {
-    border: none;   /*Removes border */
-    border-radius: 0px; /* Gets rid of rounded corners on TOC */
-    font-size: 16px;
-  }
-  
-  
-  
+caption {
+  font-size: 1em;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 0%;  
+  text-align: justify;
+}
+
+p.caption {
+  font-size: 1em;
+  font-style: italic;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 0%;  
+  text-align: justify;
+}
+
+
+
+
+/* unvisited link */
+a:link {
+  color: #C21010;
+}
+
+/* visited link */
+a:visited {
+  color: #C21010;
+}
+
+/* mouse over link */
+a:hover {
+  color: #E64848;
+}
+
+/* selected link */
+a:active {
+  color: #E64848;
+}
+
+/*----------
+div.main-container {
+  max-width: 1600px !important;
+}
+ ---------*/
+ 
+hr {
+    width:35%;
+    margin:0 auto;
+}
+
+
+
+ /*------------Table of Contents (TOC)----------- */
+
+
+
+#TOC::before {
+  content: "";
+  display: block;
+  height: 200px;
+  margin: 20px 20px 40px 20px;
+  background-image: url("covid_dashboard/covid.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.tocify {
+  border: none;   /*Removes border */
+  border-radius: 0px; /* Gets rid of rounded corners on TOC */
+  font-size: 16px;
+}
+
+
