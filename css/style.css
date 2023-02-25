@@ -73,6 +73,34 @@ text-align: center;
 
 }
 
+
+/* Buttons */
+.btn-info {
+  color:white !important;; 
+  background-color:#93BFCF !important;; 
+  border-color: #93BFCF !important;;
+}
+
+.btn-info:hover {
+  color:white !important;; 
+  background-color:#7699a6 !important;; 
+  border-color: #7699a6 !important;;
+}
+
+.btn-dark {
+  color:#474747 !important;
+  background-color:#F8CBA6 !important;
+  border-color: #F8CBA6 !important;
+}
+
+.btn-dark:hover {
+  color:#474747 !important;
+  background-color:#cfa98a !important;
+  border-color: #cfa98a !important;
+}
+
+
+
 /* About */
 #about {
     padding-top:  60px;
