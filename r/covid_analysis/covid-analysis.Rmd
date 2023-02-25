@@ -1,13 +1,30 @@
 ---
-title: "covid-analysis"
-author: "Sean Harrigan"
-date: "2023-02-19"
-output: html_document
----
+title: |
+    | COVID-19 at a glance: <br>
+    Canada, 2021
 
-# Installing packages & data
-The data is downloaded from the Canadian government website and is available 
-```{r pkg}
+author: Sean Harrigan
+abstract: |
+    This quick analysis will take data from the Government of Canada website to provide a descriptive figure of the COVID-19 pandemic in Canada in 2021. The figure will present infecctions over time, mortality rates, vaccination and key variants ofer the year stratified by province. 
+
+output:
+  html_document:
+    css: "styles.css"
+    theme: flatly
+    highlight: tango
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+---
+<br>
+<br>
+
+# 1. Setup
+The data is downloaded from the Canadian government website and is publically available [here](https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc) 
+```{r pkg, warning = FALSE, message =F}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+
 # Installing packages
 library(knitr)
 library(tidyverse)
@@ -16,7 +33,8 @@ library(ggpubr)
 library(mapcan)
 library(patchwork)
 
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+# setwd('~/Desktop/Coding/web/personal_site/r/covid_analysis/')
+
 
 # Data: https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc
 cov <- read_csv("./data/covid19-canada.csv")
@@ -24,8 +42,9 @@ vax <- read_csv('./data/vaccination.csv')
 
 ```
 
+# 2. Creating plots
 
-## Plot of infections by VOC
+## i. Infections by VOC
 ```{r inf}
 
 # Infections
@@ -60,12 +79,15 @@ voc_plot <-
                expand = c(0, 0))
 
 
-voc_plot
+ggsave( "output/infections.png", width = 7, height = 4, , bg = "white")
 
+```
+```{r img-inf, fig.cap="Figure 1. Infections by province during 2021"}
+knitr::include_graphics("output/infections.png") 
 ```
 
 
-## Plot of timeline of VOCs
+## ii. Timeline of variant
 ```{r voc}
 
 # VOCs
@@ -104,25 +126,21 @@ timeline_plot <-
                minor_breaks = '1 month',
                expand = c(0, 0))
 
-timeline_plot
+ggsave( "output/timeline.png", width = 7, height = 1.5, , bg = "white")
 
 ```
 
-## Map of COVID-19 mortality rates
+```{r img-voc, fig.cap="Figure 2. Variants waves over 2021"}
+knitr::include_graphics("output/timeline.png") 
+```
+
+## iii. Mortality rates
 The section below uses the package `canmap` to plot the map of rates by province
 ```{r map}
-
 # Map
-pop_2017 <- mapcan::province_pop_annual %>%
-  filter(year == 2017)
-
 pr_geographic <- mapcan(boundaries = province,
                         type = standard)
 
-
-pr_geographic <- inner_join(pr_geographic, 
-                            pop_2017, 
-                            by = c("pr_english" = "province"))
 
 rates <-
   cov %>% 
@@ -149,13 +167,18 @@ rates_join %>%
         legend.direction="horizontal",
         legend.title = element_text(size = 9))
 
-map
+
+
+ggsave( "output/mortality.png", width = 6, height = 6, , bg = "white")
 
 ```
 
+```{r img-motrality, fig.cap="Figure 3. Map of mortality rates"}
+knitr::include_graphics("output/mortality.png") 
+```
 
 
-## Plot of proportion vaccinated
+## iv. Vaccination
 ```{r vax}
 # Vaccination
 vax_plot <- 
@@ -185,12 +208,17 @@ vax %>%
 
 
 
-vax_plot
+ggsave( "output/vaccination.png", width = 7, height = 4, , bg = "white")
+
   
 ```
 
+```{r img-vax, fig.cap="Figure 4. Proportion of vaccinated"}
+knitr::include_graphics("output/vaccination.png") 
+```
 
-# Final plot 
+# 3. Final plot 
+The final plot will take all the plots created above and use `patchwork` to combine them into a publication-ready figure. 
 ```{r combined}
 
 combined <- 
@@ -206,7 +234,7 @@ combined <-
 
 ```
 
-```{r img}
+```{r img-combined, fig.cap="Figure 5. Final combined plots"}
 knitr::include_graphics("../../images/epi-plot-full.png") 
 ```
 

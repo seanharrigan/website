@@ -13,8 +13,9 @@ library(gghighlight)
 library(ggpubr)
 library(mapcan)
 library(plotly)
+library(bslib)
 
-#setwd('/Users/seanharrigan/Desktop/Coding/web/personal_site/r/covid_analysis/covid_dashboard/')
+# setwd('/Users/seanharrigan/Desktop/Coding/web/personal_site/r/covid_analysis/covid_dashboard/')
 
 cov <- read_csv("covid19-canada.csv") %>% 
   rename(pr_english = prname, year = reporting_year) %>% 
@@ -30,36 +31,36 @@ pr_geographic <- mapcan(boundaries = province,
 
 
 
-# Define UI
+#Define UI
 ui <- fluidPage(
-  
+
   theme = "styles.css",
-  
+
   # Application title
   # Top image
   #HTML('<center><img src="https://i.ibb.co/1zSfPP2/ramen-3950790-640.png" width="100"></center>'),
   img(class = 'topimg', src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1200px-SARS-CoV-2_without_background.png"),
-  
+
   # Application title
   h1("The COVID-19 pandemic at a glance:"),
   h3("Canadian data from 2020-2023"),
-  
+
   fluidRow(
     fluidRow(
-      
+
       column(6,
              # Province Menu
-             selectInput("pr_english", "Province", 
-                         choices = 
+             selectInput("pr_english", "Province",
+                         choices =
                          c("All", "Alberta", "British Columbia", "Manitoba",
                            "New Brunswick", "Newfoundland and Labrador", "Northwest Territories",
-                           "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec",                  
+                           "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec",
                            "Saskatchewan", "Yukon")
                            #selected = 'All')
              )
           ),
-      
-    
+
+
       column(6,
              # Year menu
              selectInput("year", "Year",
@@ -71,42 +72,34 @@ ui <- fluidPage(
       )
     )
   ),
-    
+
   fluidRow(
     column(6,
            column(12,
              # Bar Chart
-             plotOutput("brandBar", height=200) 
+             plotOutput("brandBar", height=200)
            ),
            column(12,
               # Bar Chart
               plotOutput("vaxPlot", height=200)
             )
 
-    ), 
-  
+    ),
+
     column(6,
            # Map
            plotOutput("map", height = 450)
-     
+
     )
 
   ),
-  
+
   fluidRow(
     # Table
     dataTableOutput("table")
   )
-  
+
 ))
-
-
-
-
-
-
-
-
 
 
 
