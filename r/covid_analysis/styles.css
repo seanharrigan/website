@@ -11,13 +11,14 @@ p {
 h1 {
   color: #2C3E50;
   font-size: 20pt !important;
+  padding: 10px !important;
 }
   
 .title {
   color: #2C3E50;
   text-align: center;
   line-height: 1.6;
-  padding: 60px;
+  padding: 10px;
 }
   
   
