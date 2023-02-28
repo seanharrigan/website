@@ -119,6 +119,10 @@ text-align: center;
     padding-bottom: 15px;
 }
 
+.aboutme-text {
+  font-family:sans-serif;
+  font-weight: lighter;
+}
 
 
 .personal {
@@ -644,6 +648,8 @@ a:focus {
       border-color: transparent
     }
   }
+
+
 
 
 
