@@ -331,7 +331,7 @@ background-color: #B4957C !important;
 
 #features {
     padding: 7% 8% ;
-    margin: 0;
+    margin-left: 0;
     background-color: white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -645,18 +645,6 @@ a:focus {
     }
   }
 
-
-
-  /* Pills */
-/* active (faded) */
-.nav-pills .active {
-    background-color: grey !important;
-}
-  .nav-pills .nav-link:not(.active) {
-    background-color: #a17a5a;
-    opacity: 50% ;
-    color: white
-}
 
 
 
