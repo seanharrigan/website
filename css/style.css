@@ -122,6 +122,7 @@ text-align: center;
 .aboutme-text {
   font-family:sans-serif;
   font-weight: lighter;
+  text-align: left !important
 }
 
 
