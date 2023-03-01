@@ -88,6 +88,12 @@
                             <div class="mt-5">
                                 <!--<input class="btn btn-secondary" type="button" value="Contact me" href="#footer"> --> 
                                 <a class="btn btn-secondary" style="color:white" href="#footer">Contact me </a>
+                                <a class="btn btn-info" style="color:white; font-weight: normal;" href="html/cv.html"> See my CV </a>
+                                <p style="text-align: center;">
+                                  <a href="https://orcid.org/0000-0001-6021-7402" class="footer fa fa-2x fa-brands fa-orcid" style="padding-right: 1%; padding-left: 1%; padding-top: 5%"></a>
+                                  <a href="https://www.linkedin.com/in/sean-harrigan-8a281614a/" class="footer fa  fa-2x fa-linkedin" style="padding-right: 1%; padding-left: 1%; padding-top: 5%"></a>
+                                  <a href="https://github.com/seanharrigan" class="footer fa fa-2x fa-github" style="padding-right: 1%; padding-left: 1%; padding-top: 5%"></a>
+                              </p>
                             </div>
                         </div>
                     </div>
@@ -216,57 +222,6 @@ particlesJS("particles-js", {
 });
 </script>
 
-<!--<script type="text/javascript" src="js/particles.js"></script>-->
-
-
-
-
-    <!---- <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2 class="timeline-title">he</h2>
-    <br>
-
-    <div class="row hide-if-small-screen" style="padding-top: 5%">
-      <div class="col-lg-12 text-center">
-        <svg width="1000" height="100">
-          <line x1="0" y1="50" x2="1000" y2="50" style="stroke:black; stroke-width:1.5" />
-  
-          <circle cx="150" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
-          <text text-anchor="middle" x="150" y="80" fill="black">2019</text>
-          <text font-size="13" text-anchor="middle" x="70" y="30" fill="black">Research Associate</text>
-          <text style="font-style: italic" font-size="13" text-anchor="middle" x="70" y="80" fill="#808080">Broadstreet HEOR</text>
-  
-          <circle cx="450" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
-          <text text-anchor="middle" x="450" y="80" fill="black">2016</text>
-          <text font-size="13" text-anchor="middle" x="300" y="30" fill="black">Research Assistant</text>
-          <text style="font-style: italic" font-size="13" text-anchor="middle" x="300" y="80" fill="#808080">UBC</text>
-  
-          <circle cx="650" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
-          <text text-anchor="middle" x="650" y="80" fill="black">2017</text>
-          <text font-size="13" text-anchor="middle" x="550" y="30" fill="black">Primary Data Analyst </text>
-          <text style="font-style: italic" font-size="13" text-anchor="middle" x="550" y="80" fill="#808080">UBC</text>
-  
-          <circle cx="850" cy="50" r="10" stroke="#f8f9fa" stroke-width="6" fill="#93BFCF" />
-          <text text-anchor="middle" x="850" y="80" fill="black">2019</text>
-          <text font-size="13" text-anchor="middle" x="750" y="30" fill="black">Epidemiologist</text>
-          <text style="font-style: italic" font-size="13" text-anchor="middle" x="750" y="80" fill="#808080">BCCDC
-            Institute</text>
-  
-          <text font-size="13" text-anchor="middle" x="930" y="30" fill="black">Data - Science - Viz</text>
-          <text style="font-style: italic" font-size="13" text-anchor="middle" x="930" y="80"
-            fill="#808080">Freelance</text>
-  
-        </svg>
-      </div>
-
-      <br>
-      <br>
-      <br>
-      <br>
- ----> 
   <!-- Features -->
 
   <div class="container-fluid" >
@@ -283,7 +238,7 @@ particlesJS("particles-js", {
           <!--<i class="fa-solid fa-calculator fa-4x features-icon"></i> -->
           <h3 style =" font-family: courier; font-size: 2em;">About me.</h3>
           <hr >
-          <p class="features-text" style="text-align: justify;">My name is Sean, I am en epidemiologist working for the UBC and BC 
+          <p class="features-text" style="text-align: justify; padding-left: 15px; padding-right: 15px;">My name is Sean, I am en epidemiologist working for the UBC and BC 
             Centres for Disease Control in Vancouver, British Columbia. My recent work focuses on COVID-19 variant severity. 
             <br> 
             <br> 
@@ -586,7 +541,13 @@ particlesJS("particles-js", {
     <section id="cards">
       <div><h3 style="padding-top: 2%;  text-align: center; color: grey; font-family: courier; font-size: 2em;">Publications</h3></div>
       <hr>
-
+      <div class="about-me row justify-content-md-center" >
+        <div class="code-text col-lg-5" style = "padding-left: 25px; padding-right: 25px; text-align:justify">
+          <p>I have several publications on a wide array of topics including COVID-19 variant severity, breast cancer risk, 
+            and drug effecivess. Many of these analyses I am the primary author and have lead the analysis and writing.
+          </p>
+        </div>
+      </div>
       <!-- Desktop version -->
       <div class="box flex hidden-mobile">
           <div class="container-cards-desktop hidden-mobile">
@@ -651,7 +612,19 @@ particlesJS("particles-js", {
             {r, code-div}
           </div>
       </div>
-
+      <div class="about-me row justify-content-md-center" >
+        <div class="code-text col-lg-6" style = "padding-left: 25px; padding-right: 25px">
+          <p>The section below will provide a brief example of my skillset using publically available data taken from the 
+            <a href="https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc">Government of Canada</a> webiste.
+            In this example I will walk through data preparation techniques and provide three deliverables: 
+            <ol >
+              <li> A <strong>figure</strong> of COVID-19 in Canada in 2021</li>
+              <li> A <strong>dahsboard</strong> of COVID-19 in Canada over the pandemic</li>
+              <li> A <strong>report</strong> of COVID-19 in Canada in 2021</li>
+            </ol>
+          </p>
+        </div>
+      </div>
       <div class="site-wrapper">
         <section class="tabs-wrapper">
           <div class="tabs-container">
@@ -1141,6 +1114,15 @@ particlesJS("particles-js", {
 
           <div><h3 style="padding-top: 2%; font-family: courier; font-size: 2em;">Volunteer projects</h3></div>
           <hr>
+          
+          <div class="about-me row justify-content-md-center" >
+            <div class="code-text col-lg-6" style = "padding-left: 25px; padding-right: 25px; text-align: justify; font-family:sans-serif;">
+              <p>I have always had a passion for global health, and have made it a priorty to help out where I can. Since the
+                beginning of my Master's program, I have been a part of two amazing global healht projects, through the Gloabal
+                Health Initiative at UBC.
+              </p>
+            </div>
+          </div>
 
           <div id="testimonial-carousel"  style="padding-top: 0px" class="carousel slide" data-ride="false">
             <div class="carousel-inner" style="padding-top: 0px">
@@ -1217,9 +1199,9 @@ particlesJS("particles-js", {
 
   <!-- Add font awesome icons -->
   <p style="text-align: center;">
-      <a href="https://orcid.org/0000-0001-6021-7402" class="footer fa fa-brands fa-orcid" style="padding-right: 1%; padding-left: 1%"></a>
-      <a href="https://www.linkedin.com/in/sean-harrigan-8a281614a/" class="footer fa fa-linkedin" style="padding-right: 1%; padding-left: 1%"></a>
-      <a href="https://github.com/seanharrigan" class="footer fa fa-github" style="padding-right: 1%; padding-left: 1%"></a>
+      <a href="https://orcid.org/0000-0001-6021-7402" class="footer fa fa-2x fa-brands fa-orcid" style="padding-right: 1%; padding-left: 1%"></a>
+      <a href="https://www.linkedin.com/in/sean-harrigan-8a281614a/" class="footer fa fa-2x fa-linkedin" style="padding-right: 1%; padding-left: 1%"></a>
+      <a href="https://github.com/seanharrigan" class="footer fa fa-2x fa-github" style="padding-right: 1%; padding-left: 1%"></a>
   </p>
 
   &nbsp;

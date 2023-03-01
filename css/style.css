@@ -390,9 +390,11 @@ a:visited {
 
 a:link:hover {
     color: #F8CBA6 !important;
+    text-decoration: none;
 }
 a:hover {
     color: #F8CBA6 !important;
+    text-decoration: none;
   }
 
 a:active {
