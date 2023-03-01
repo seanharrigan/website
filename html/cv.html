@@ -22,15 +22,77 @@
         background: linear-gradient(#E0ECF1, 50%, white 100%)
         }
 
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #F8CBA6
+        }
+
+        .fa {
+            color: #A17A5A
+        }
+
+        body{ 
+            padding-bottom:0px;
+            margin-bottom:0px
+        }
+
+        #footer {
+            padding-bottom:0px;
+            margin-bottom:0px
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        li {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        navbar-brand {
+            color:white; opacity:0.9; font-family: 'Montserrat', sans-serif !important;
+        }
+
+
         
     </style>
 
 </head>
 <body>
-    
-    <nav class="navbar navbar-light justify-content-between"  style="background-color: #E0ECF1;">
-        <a class="navbar-brand" href="../index.html" style = "padding-left: 15px; color: #6C757D; opacity: 65%"> < Return to main site</a>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark" style=" background: linear-gradient(#93BFCF, 10%, #E0ECF1 100%)">  <!-- style="background: linear-gradient(#93BFCF 0%, #93BFCF  20%, #93BFCF  0%, white 100%)">-->
+        <a class="navbar-brand" style="color:white; opacity:0.9; font-family: 'Montserrat', sans-serif !important; padding-left: 10px;" 
+        href="https://seanharrigan.github.io/website/"> Back to full site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="color:white; opacity:0.6;" href="https://seanharrigan.github.io/website/#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#cards">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#code">Code</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#awards"> Recognition</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#testimonials">Volunteer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#contactform">Contact</a>
+            </li>
+        </ul>
+      </div>
+      </nav>
+
     <div class="transition-blue-white" ></div>
     <div class="hidden-mobile" style=" display: flex; justify-content: center;" >
         <embed src="cv.pdf" width="500" height="646" type="application/pdf" style="margin: 0 auto;">
@@ -41,8 +103,28 @@
         <a href="https://orcid.org/0000-0001-6021-7402" class="footer fa-4x fa-brands fa-orcid" 
         style="padding-right: 1%; padding-left: 1%; color: grey; text-decoration:none;"></a>
     </p>
-    <section id="footer" style = "background: linear-gradient(white, 35%, #E0ECF1 100%)">
+    
+    <section id="footer" style = "background: #E0ECF1;">
     <div class="transition-white-blue"></div>
     
+    <p style="text-align: center; padding-top: 30px;">
+        <a class="footer" href="" style = " font-weight: normal !important; size: 1.5rem; color:#A17A5A; padding-top: 30px;">
+            Sean Harrigan
+        </a>
+    </p>
+    <!--  <p style="text-align: center;"><span style="color: #808080;"><a style="color: #808080; font-weight: normal !important; " href="mailto: sean.pat.harrigan@gmail.com">sean.pat.harrigan@gmail.com</a></span></p> --> 
+  
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!-- Add font awesome icons -->
+    <p style="text-align: center; padding-bottom: 40px; padding-top: 20px; margin: 0px">
+        <a href="https://orcid.org/0000-0001-6021-7402" class="footer fa fa-2x fa-brands fa-orcid" style="padding-right: 1%; padding-left: 1%"></a>
+        <a href="https://www.linkedin.com/in/sean-harrigan-8a281614a/" class="footer fa fa-2x fa-linkedin" style="padding-right: 1%; padding-left: 1%"></a>
+        <a href="https://github.com/seanharrigan" class="footer fa fa-2x fa-github" style="padding-right: 1%; padding-left: 1%"></a>
+    </p>
+
+    </section>
+
 </body>
 </html>
