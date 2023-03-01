@@ -943,14 +943,14 @@ color: darkgrey
     background: #e2dedb;
     color: #b3aca7;
     position: relative;
-    width: 450px;
+    width: 400px;
     margin: 50px auto 100px auto;
     }
 
     input {
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
-    width: 420px;
+    width: 400px;
     height: 50px;
     padding: 0px 15px 0px 15px;
     
@@ -973,8 +973,8 @@ color: darkgrey
     }
 
     textarea {
-    width: 420px;
-    max-width: 420px;
+    width: 400px;
+    max-width: 400px;
     height: 110px;
     max-height: 110px;
     padding: 15px;
@@ -1000,7 +1000,7 @@ color: darkgrey
     }
 
     #submit {
-    width: 420px;
+    width: 400px;
     
     padding: 0;
     margin: -5px 0px 0px 0px;
