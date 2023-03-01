@@ -11,12 +11,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet"></head>
 
     <title>CV</title>    
+    <style>
+        .transition-white-blue { 
+        height:100px; 
+        background: linear-gradient(white, 50%, #E0ECF1 100%)
+        }
+
+        .transition-blue-white { 
+        height:100px; 
+        background: linear-gradient(#E0ECF1, 50%, white 100%)
+        }
+    </style>
+
 </head>
 <body>
-    <nav class="navbar navbar-light justify-content-between"  style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="../index.html" style = "padding-left: 15px; color: #6C757D"> < Return to main site</a>
-      </nav>
-      <p syle =" padding-bottom: 40px"></p>
+    <nav class="navbar navbar-light justify-content-between"  style="background-color: #E0ECF1;">
+        <a class="navbar-brand" href="../index.html" style = "padding-left: 15px; color: #6C757D; opacity: 65%"> < Return to main site</a>
+    </nav>
+    <div class="transition-blue-white" ></div>
     <div class="hidden-mobile" style=" display: flex; justify-content: center;" >
         <embed src="cv.pdf" width="500" height="646" type="application/pdf" style="margin: 0 auto;">
     </div>
@@ -26,5 +38,9 @@
         <a href="https://orcid.org/0000-0001-6021-7402" class="footer fa-4x fa-brands fa-orcid" 
         style="padding-right: 1%; padding-left: 1%; color: grey; text-decoration:none;"></a>
     </p>
+    <section id="footer" style = "background: linear-gradient(white, 35%, #E0ECF1 100%)">
+    <div class="transition-white-blue" ></div>
+    <div height="100px" style="background: blue" ></div>
+
 </body>
 </html>
