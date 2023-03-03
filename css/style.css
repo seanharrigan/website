@@ -525,7 +525,8 @@ a:focus {
 .awards-text {
     color: grey;
     size: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
 }
 
 
