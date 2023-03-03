@@ -1,11 +1,11 @@
 ---
 title: |
-    | COVID-19 at a glance: <br>
-    Canada, 2021
+    | COVID-19 at a glance: 
+    | Canada, 2021
 
 author: Sean Harrigan
 abstract: |
-    This quick report analyse COVID-19 data publically available on the Canadian Government webiste to better understand infections, mortality rates, vaccination and variants over the pandemic. The goal of this report is to deomstrate an analysis pipeline can be outputed as a report, ready to share to colleagues and simplify communcaiton of results
+    This quick report analysed COVID-19 data publicly available on the Canadian Government website to better understand infections, mortality rates, vaccination and variants over the pandemic. The goal of this report is to deomstrate how an analysis pipeline can be outputed as a report, ready to share to colleagues and simplify communcation of results
 
 output:
   html_document:
@@ -30,15 +30,14 @@ The first cases of COVID-19, an infection caused by SARS-CoV-2, was first discov
 This report will use publically available data downloaded from the government of Canada website to better understand key trends of COVID-19 during 2021. In doing so, this report will create informative tables and figures for infections, mortality, and vaccination by province.
 
 # Methods 
-## Setting
-This report uses data from Canada in 2021. The report takes the data stratified by province. 
 
 ## Data 
-The data used in this analysis is publically available and can be found at the Canadian Government [webiste](https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc). Variables
-The variables of interest are infections, mortality and vaccination. 
+The data used in this analysis is publicly available and can be found at the Canadian Government [webiste](https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc). This report uses data from 2021, which was a key point in the pandemic with the introduction of variants of concern (VOC) and the COVID-19 vaccines. The report takes the data stratified by province. The variables of interest were infections, mortality and vaccination. 
 
 ## Analysis
-This report was conducted using `r` using packages from the `tidyverse`. Descriptive characteristics of each metric, stratified by province. 
+This report was conducted using `r` and `rmarkdown` using packages from the `tidyverse` for data cleaning and wrangling, `ggplot2` for creating figures and `mapcan` for creating the chloropleth map. Descriptive characteristics of each metric, stratified by province.
+<br> <br>
+This analysis will conduct three primary sub-analyses: i) infections by province over time; ii) mortality rate over the year, plotted over a map of Canada; and iii) percentage of vaccinated (partially and fully). 
 
 # Results
 ```{r pkg, warning = FALSE, message =F}
@@ -63,6 +62,8 @@ vax <- read_csv('./data/vaccination.csv')
 
 
 ## Infections by VOC
+Over the course of 2021, Canadian provinces were impacted by several waves. Many of them being caused by the introduction of new VOCs. As seen in Figure 1, Ontario and Québec (the two most populous province), had the largest spikes in cases per day, totaling from 5,000 to 8,000. These large spikes overlapped with certain VOCs, for instance Ontario had its largest spike in cases during the Alpha and Gamma waves, while Québec had theirs during the Omicron wave.
+
 ```{r inf}
 
 # Infections
@@ -146,7 +147,8 @@ knitr::include_graphics("output/report-inf-voc.png")
 
 
 ## Mortality rates
-The section below uses the package `canmap` to plot the map of rates by province
+When looking at mortality rates by 100,000 people, Québec had the highest rates, with about 2.5 deaths per 100,000 (Figure 2). This was followed by Manitoba, which had a rate of approximately 2/100,000. Nunavut had the smallest rate, with less than 1 death per 100,000 people. 
+
 ```{r map}
 # Map
 pr_geographic <- mapcan(boundaries = province,
@@ -184,16 +186,16 @@ ggsave( "output/mortality.png", width = 6, height = 6, , bg = "white")
 
 ```
 
-```{r img-motrality, fig.cap="Figure 3. Map of mortality rates"}
+```{r img-motrality, fig.cap="Figure 2. Map of mortality rates"}
 knitr::include_graphics("output/mortality.png") 
 ```
 
 
 
 ## Vaccination
-The vaccination program in Canada began in early 2021. The vaccination strategy differed from province to province, with some provinces giving second vaccinations 2 weeks after the first, while other province aimed to get the majority of the province partially vaccinated before the second dose. A wide range of vaccinations were used in Canada, including Johnson and Johnson, ....
+The vaccination program in Canada began in early 2021. The vaccination strategy differed from province to province, with some provinces giving second vaccinations 2 weeks after the first, while other province aimed to get the majority of the province partially vaccinated before the second dose. A wide range of vaccinations were used in Canada, mRNA and non-mRNA vaccines. 
 
-As can be seen by figure X, within the first 6 months of the vaccination program, about 45% of individuals were vaccinated. 
+As can be seen by figure 3, within the first 6 months of the vaccination program, about 45% of individuals were vaccinated.It was around June 2021, where the majority of individuals started receiving their second doses. At the end of the calendar year, over 80% of eligible Canadians had been fully vaccinated.
 
 ```{r vax}
 # Vaccination
@@ -232,3 +234,7 @@ ggsave( "output/vaccination.png", width = 7, height = 4, , bg = "white")
 ```{r img-vax, fig.cap="Figure 4. Proportion of vaccinated"}
 knitr::include_graphics("output/vaccination.png") 
 ```
+
+
+# Conclusions
+This brief analysis summarised important characteristics of the COVID-19 pandemic in Canada in 2021. The aim of this analysis was to demonstrate how an analysis pipeline can be incorporated into the a workflow which produces an automated report, which allows ease of communication of findings with colleagues and other stakeholders.
