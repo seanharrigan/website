@@ -18,6 +18,7 @@ output:
       smooth_scroll: true
 ---
 <br>
+<hr>
 <br>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -29,6 +30,10 @@ The first cases of COVID-19, an infection caused by SARS-CoV-2, was first discov
 <br>
 This report will use publically available data downloaded from the government of Canada website to better understand key trends of COVID-19 during 2021. In doing so, this report will create informative tables and figures for infections, mortality, and vaccination by province.
 
+<br>
+<hr>
+<br>
+
 # Methods 
 
 ## Data 
@@ -38,6 +43,10 @@ The data used in this analysis is publicly available and can be found at the Can
 This report was conducted using `r` and `rmarkdown` using packages from the `tidyverse` for data cleaning and wrangling, `ggplot2` for creating figures and `mapcan` for creating the chloropleth map. Descriptive characteristics of each metric, stratified by province.
 <br> <br>
 This analysis will conduct three primary sub-analyses: i) infections by province over time; ii) mortality rate over the year, plotted over a map of Canada; and iii) percentage of vaccinated (partially and fully). 
+
+<br>
+<hr>
+<br>
 
 # Results
 ```{r pkg, warning = FALSE, message =F}
@@ -234,7 +243,9 @@ ggsave( "output/vaccination.png", width = 7, height = 4, , bg = "white")
 ```{r img-vax, fig.cap="Figure 4. Proportion of vaccinated"}
 knitr::include_graphics("output/vaccination.png") 
 ```
-
+<br>
+<hr>
+<br>
 
 # Conclusions
 This brief analysis summarised important characteristics of the COVID-19 pandemic in Canada in 2021. The aim of this analysis was to demonstrate how an analysis pipeline can be incorporated into the a workflow which produces an automated report, which allows ease of communication of findings with colleagues and other stakeholders.
