@@ -51,9 +51,14 @@ h4 {
   padding-top: 15px;
   padding-bottom: 30px;
 }
+
+.td { 
+   color: #808080;
+}
   
 caption {
   font-size: 1em;
+  color: #808080;
   font-style: italic;
   color: grey;
   margin-right: 10%;
@@ -63,11 +68,21 @@ caption {
 
 p.caption {
   font-size: 1em;
+  color: #808080;
   font-style: italic;
   color: grey;
   margin-right: 10%;
   margin-left: 0%;  
   text-align: justify;
+}
+
+
+p.fignotes {
+  font-size: 0.8em;
+  color: grey;
+  margin-right: 10%;
+  margin-left: 0%;  
+  text-align: center;
 }
 
 

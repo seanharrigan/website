@@ -24,11 +24,33 @@ output:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
 
+```{r pkg, warning = FALSE, message =F}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+
+# Installing packages
+library(knitr)
+library(tidyverse)
+library(RColorBrewer)
+library(ggpubr)
+library(mapcan)
+library(patchwork)
+library(kableExtra)
+library(janitor)
+
+# setwd('~/Desktop/Coding/web/personal_site/r/covid_analysis/')
+
+
+# Data: https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc
+cov <- read_csv("./data/covid19-canada.csv")
+vax <- read_csv('./data/vaccination.csv')
+
+```
+
 # Background 
-The first cases of COVID-19, an infection caused by SARS-CoV-2, was first discovered in 2019, and quickly spread across the globe. Since the beginning of the pandemic, COVID-19 has stressed healthcare systems, leading to the implementation of various public health measures and vaccination programs. In 2021, researchers and clinicians began to discover increased rates of infeection and mortality being caused by specific strains of COVID-19. These variants, named variants of concern (VOCs), include Alpha, Beta, Gamma, Delta and Omicron. 
+The first cases of COVID-19, an infection caused by SARS-CoV-2, was first discovered in 2019, and quickly spread across the globe. Since the beginning of the pandemic, COVID-19 has stressed healthcare systems, leading to the implementation of various public health measures and vaccination programs. In 2021, researchers and clinicians began to discover increased rates of infection and mortality being caused by specific strains of COVID-19. These variants, named variants of concern (VOCs), include Alpha, Beta, Gamma, Delta and Omicron. 
 <br>
 <br>
-This report will use publically available data downloaded from the government of Canada website to better understand key trends of COVID-19 during 2021. In doing so, this report will create informative tables and figures for infections, mortality, and vaccination by province.
+This report will use publicly available data downloaded from the government of Canada website to better understand key trends of COVID-19 during 2021. In doing so, this report will create informative tables and figures for infections, mortality, and vaccination by province.
 
 <br>
 <hr>
@@ -38,6 +60,31 @@ This report will use publically available data downloaded from the government of
 
 ## Data 
 The data used in this analysis is publicly available and can be found at the Canadian Government [webiste](https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc). This report uses data from 2021, which was a key point in the pandemic with the introduction of variants of concern (VOC) and the COVID-19 vaccines. The report takes the data stratified by province. The variables of interest were infections, mortality and vaccination. 
+
+```{r}
+census_pop2016 %>% 
+  as_tibble() %>% 
+  group_by(pr_english) %>% 
+  summarise(pop = sum(population_2016), .groups = 'drop') %>% 
+  arrange(desc(pop)) %>%
+  adorn_totals("row") %>% 
+  mutate(perc = round(pop / 35151728 * 100, 1)) %>% 
+  mutate(pop = formatC(pop, format="d", big.mark=",")) %>% 
+  rename(Province = `pr_english`, Population = pop, 
+         `Percent of total` = perc) %>% 
+  kbl(caption = "Table 1. Population sizes by province", 
+      align = c('l', 'r', 'r')) %>%
+  kable_classic(full_width = F, html_font = "Cambria") %>% 
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>% 
+  row_spec(0, bold = T) %>% 
+  row_spec(14, bold = T) %>% 
+  column_spec(1, width = '15em') %>% 
+  column_spec(2, width = '12em')%>% 
+  column_spec(3, width = '12em')
+
+
+```
+<p class = "fignotes"> <strong>Notes:</strong> Data taken from population sizes from 2016 Data taken from the [MapCan package](https://cran.r-project.org/web/packages/mapcan/vignettes/choropleth_maps_vignette.html). </p>
 
 ## Analysis
 This report was conducted using `r` and `rmarkdown` using packages from the `tidyverse` for data cleaning and wrangling, `ggplot2` for creating figures and `mapcan` for creating the chloropleth map. Descriptive characteristics of each metric, stratified by province.
@@ -49,26 +96,6 @@ This analysis will conduct three primary sub-analyses: i) infections by province
 <br>
 
 # Results
-```{r pkg, warning = FALSE, message =F}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE)
-
-# Installing packages
-library(knitr)
-library(tidyverse)
-library(RColorBrewer)
-library(ggpubr)
-library(mapcan)
-library(patchwork)
-
-# setwd('~/Desktop/Coding/web/personal_site/r/covid_analysis/')
-
-
-# Data: https://open.canada.ca/data/en/dataset/261c32ab-4cfd-4f81-9dea-7b64065690dc
-cov <- read_csv("./data/covid19-canada.csv")
-vax <- read_csv('./data/vaccination.csv')
-
-```
-
 
 ## Infections by VOC
 Over the course of 2021, Canadian provinces were impacted by several waves. Many of them being caused by the introduction of new VOCs. As seen in Figure 1, Ontario and Québec (the two most populous province), had the largest spikes in cases per day, totaling from 5,000 to 8,000. These large spikes overlapped with certain VOCs, for instance Ontario had its largest spike in cases during the Alpha and Gamma waves, while Québec had theirs during the Omicron wave.
