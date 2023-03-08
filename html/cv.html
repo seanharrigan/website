@@ -58,40 +58,187 @@
         }
 
 
+        /* Navbar */
+.nav-link {
+  color:white !important; 
+  opacity:0.6 !important; 
+  font-family: Roboto, sans-serif !important;
+  text-decoration: none !important;
+}
+
+
+.navbar { 
+  padding-bottom: 0 4.5rem;
+  color: black;
+}
+
+.navbar-brand {
+  color: black;
+  font-family: 'Ubuntu';
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.nav-item {
+  color: black;
+  padding: 0 18px
+}
+
+.nav-link {
+  color: black;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  font-weight: light
+
+}
+
+.navbar-toggler {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  transition: .5s ease-in-out;
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  position: relative;
+  opacity: 80%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #A17A5A;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.middle-bar {
+  margin-top: 0px;
+}
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+  position: absolute;
+  top: 0px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  position: absolute;
+  top: 20px;
+  transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+  top: inherit;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  top: inherit;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  top: inherit;
+  transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+  background: linear-gradient( 263deg, #93BFCF 0%, #293e4d 100% );
+}
+
+
         
     </style>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style=" background: linear-gradient(#93BFCF, 10%, #E0ECF1 100%)">  <!-- style="background: linear-gradient(#93BFCF 0%, #93BFCF  20%, #93BFCF  0%, white 100%)">-->
-        <a class="navbar-brand" style="color:white; opacity:0.9; font-family: 'Montserrat', sans-serif !important; padding-left: 10px;" 
-        href="https://seanharrigan.github.io/website/"> Back to full site</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" style="color:white; opacity:0.6;" href="https://seanharrigan.github.io/website/#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#cards">Works</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#code">Code</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#awards"> Recognition</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#testimonials">Volunteer</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" style="color:white; opacity:0.6" href="https://seanharrigan.github.io/website/#contactform">Contact</a>
-            </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style=" background: linear-gradient(#93BFCF, 10%, #E0ECF1 100%)">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home" style="color:white; opacity:0.8; font-size: 1.5em !important">Epi & Data Sci.</a>
+          <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cards">Publications</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#code">Code</a>
+              </li>
+              <li style="outline: none;" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Example Work
+                </a>
+                <ul style = "background-color: #E0ECF1" class="dropdown-menu">
+                  <li><a class="dropdown-item" href="r/covid_analysis/covid-analysis.html">Figure</a></li>
+                  <li><a class="dropdown-item" href="https://qg2ap2-sean-harrigan.shinyapps.io/covid_dashboard/?_ga=2.244017029.1867657955.1677176432-1345087095.1677176432">Dashboard</a></li>
+                  <li><a class="dropdown-item" href="./r/covid_analysis/covid_manuscript.html">Report</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#awards">Recognition</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonials">Volunteer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contactform">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+    
+
 
     <div class="transition-blue-white" ></div>
     <div class="hidden-mobile" style=" display: flex; justify-content: center;" >
