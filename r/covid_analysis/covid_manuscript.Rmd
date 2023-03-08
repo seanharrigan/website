@@ -76,7 +76,7 @@ census_pop2016 %>%
       align = c('l', 'r', 'r')) %>%
   kable_classic(full_width = F, html_font = "Cambria") %>% 
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>% 
-  row_spec(0, bold = T) %>% 
+  row_spec(0,  bold = T) %>% 
   row_spec(14, bold = T) %>% 
   column_spec(1, width = '15em') %>% 
   column_spec(2, width = '12em')%>% 
